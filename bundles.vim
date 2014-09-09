@@ -89,6 +89,7 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'pangloss/vim-javascript'
 Bundle 'tsaleh/vim-tmux'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'JSON.vim'

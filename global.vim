@@ -16,6 +16,9 @@ if has('multi_byte')
 end
 
 " presentation settings
+if !has('gui_running')
+    set t_Co=256        " terminal will display vim in 256 colors
+endif
 set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
