@@ -3,6 +3,9 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
+" my preferred colorscheme
+colorscheme jellybeans
+
 " prevent vim from adding that stupid empty line at the end of every file
 set noeol
 set binary
@@ -54,8 +57,8 @@ set modelines=5         " number of lines to check for vim: directives at the st
 "set fixdel                 " fix terminal code for delete (if delete is broken but backspace works)
 set autoindent          " automatically indent new line
 
-set ts=4                " number of spaces in a tab
-set sw=4                " number of spaces for indent
+set ts=2                " number of spaces in a tab
+set sw=2                " number of spaces for indent
 set et                  " expand tabs into spaces
 
 set ttimeoutlen=50      " fast Esc to normal mode
@@ -76,6 +79,14 @@ set smartcase           " do not ignore if search pattern has CAPS
 set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
+
+" syntax highlight association
+" associate *.ejs and *.vue with html filetype
+function HtmlAssocFiletype()
+  sil exe "set filetype=html"
+endfunction
+autocmd BufRead,BufNewFile *.ejs call HtmlAssocFiletype()
+autocmd BufRead,BufNewFile *.vue call HtmlAssocFiletype()
 
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
