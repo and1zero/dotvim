@@ -13,6 +13,12 @@ nmap <silent> <C-N> :silent noh<CR>
 " Ctrol-E to switch between 2 last buffers
 nmap <C-E> :b#<CR>
 
+" Ctrl + V to paste from clipboard
+nmap <C-v> "+p
+
+" Ctrl + Y to copy to clipboard
+nmap <C-y> "+y
+
 " ,e to fast finding files. just type beginning of a name and hit TAB
 nmap <leader>e :e **/
 
